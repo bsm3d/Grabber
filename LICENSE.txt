@@ -1,0 +1,5 @@
+﻿Grabber, © Benoit Saint-Moulin, (www.bsm3d.com, github.com/bsm3d/Grabber). Free to use, all rights reserved on the source code. No warranty.
+
+This program carries FFmpeg (ffmpeg.exe), built by gyan.dev, a GPL v3 build: FFmpeg is free software, its licence is in
+the file FFMPEG-LICENSE.txt and its source code is at https://ffmpeg.org/ . The sound of the PC is taken with
+the WASAPI interface of Windows, and the program itself is written in C++ with the Windows API (no other library).
