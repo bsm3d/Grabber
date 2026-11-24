@@ -12,15 +12,15 @@ $here = Split-Path -Parent $MyInvocation.MyCommand.Path
 Set-Location $here
 $mingw = if ($env:GRABBER_MINGW) { $env:GRABBER_MINGW } else { 'C:\msys64\ucrt64\bin' }
 $env:PATH = "$mingw;$env:PATH"
-$src = 'util.cpp', 'core.cpp', 'cards.cpp', 'toolkit.cpp', 'ui.cpp', 'main.cpp'
+$src = 'util', 'core', 'cards', 'toolkit', 'ui', 'main' | ForEach-Object { "src\$_.cpp" }
 $flags = '-std=c++17', '-O2', '-Wall', '-Wno-unknown-pragmas', '-Wno-unused-function', '-DUNICODE', '-D_UNICODE', '-DWINVER=0x0A00', '-D_WIN32_WINNT=0x0A00', '-DNTDDI_VERSION=0x0A000007'
 if ($Syntax) {
     & g++ @flags -fsyntax-only @src
     exit $LASTEXITCODE
 }
-$version = ([regex]::Match((Get-Content grabber.h -Raw), '#define APP_VERSION L"([^"]+)"')).Groups[1].Value
+$version = ([regex]::Match((Get-Content src\grabber.h -Raw), '#define APP_VERSION L"([^"]+)"')).Groups[1].Value
 New-Item -ItemType Directory -Force obj | Out-Null
-$headers = Get-ChildItem *.h
+$headers = Get-ChildItem src\*.h
 $objs = @()
 foreach ($s in $src) {
     $o = "obj\$([IO.Path]::GetFileNameWithoutExtension($s)).o"
@@ -36,7 +36,8 @@ foreach ($s in $src) {
     }
     $objs += $o
 }
-& windres -DUNICODE -O coff grabber.rc obj\grabber_res.o
+# -I src: where windres finds the manifest named by grabber.rc (the icon stays at the root)
+& windres -DUNICODE -I src -O coff src\grabber.rc obj\grabber_res.o
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & g++ -municode -mwindows -static -static-libgcc -static-libstdc++ @objs obj\grabber_res.o -o Grabber.exe -lgdiplus -lgdi32 -luser32 -lole32 -loleaut32 -luuid -ldwmapi -lshell32 -lshlwapi -lcomdlg32 -lcomctl32 -ladvapi32 -lpropsys -lwinmm
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
