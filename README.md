@@ -1,3 +1,7 @@
+<p align="center"><img src="docs/robot.png" alt="The Grabber robot holding a camera" width="520"></p>
+
+<p align="center">Grabber is cool :)</p>
+
 # Grabber
 
 A small screen video capture tool for Windows. It records a zone, a whole screen, a window or a set of applications into an MP4 (H.264), with the sound of the PC and, if you want, your microphone.
