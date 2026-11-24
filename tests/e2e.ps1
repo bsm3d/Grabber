@@ -1,4 +1,9 @@
-﻿# End to end checks of Grabber.exe, with test windows of our own (nothing of the real desktop is kept: only pixels of the test windows are measured).
+﻿# Grabber
+# © Benoit Saint-Moulin - 2026
+# Version du fichier : 1.2.0
+# Fonction du fichier : End to end test script that runs Grabber.exe against test windows and checks pixels and recordings.
+
+# End to end checks of Grabber.exe, with test windows of our own (nothing of the real desktop is kept: only pixels of the test windows are measured).
 #   powershell -File tests\e2e.ps1 [-Exe path\to\Grabber.exe]
 # Needs Python with PySide6 (GRABBER_TEST_PYTHON, or python on the PATH) for the test windows, and ffmpeg/ffprobe on the PATH.
 param([string]$Exe = (Join-Path (Split-Path -Parent $PSScriptRoot) 'Grabber.exe'))

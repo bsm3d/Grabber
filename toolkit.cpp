@@ -1,4 +1,8 @@
-﻿// Grabber: the widget set (see toolkit.h).
+﻿// Grabber
+// © Benoit Saint-Moulin - 2026
+// Version du fichier : 1.2.0
+// Fonction du fichier : Implementation of the hand-drawn widget set: buttons, check boxes, combo boxes, lists, spin boxes and sliders.
+
 #include "toolkit.h"
 
 #include <dwmapi.h>

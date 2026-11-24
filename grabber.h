@@ -1,5 +1,8 @@
-// Grabber: a small screen recorder for Windows. Shared declarations.
-// Author: Benoit Saint-Moulin
+// Grabber
+// © Benoit Saint-Moulin - 2026
+// Version du fichier : 1.2.0
+// Fonction du fichier : Shared declarations of Grabber: the JSON value, INI settings, process runner, compression profiles and capture types.
+
 #pragma once
 #ifndef UNICODE
 #define UNICODE

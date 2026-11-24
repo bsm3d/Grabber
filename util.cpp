@@ -1,4 +1,8 @@
-// Grabber: small helpers (strings, JSON, settings, processes).
+// Grabber
+// © Benoit Saint-Moulin - 2026
+// Version du fichier : 1.2.0
+// Fonction du fichier : Small helpers for strings (UTF-8 and UTF-16), formatting, text file writing, JSON and INI settings, and processes.
+
 #include "grabber.h"
 
 #include <chrono>

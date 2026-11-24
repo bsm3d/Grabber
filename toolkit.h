@@ -1,4 +1,8 @@
-// Grabber: a small widget set drawn by hand (buttons, check boxes, radio buttons, combo boxes, a list with check boxes, spin boxes, sliders),
+// Grabber
+// © Benoit Saint-Moulin - 2026
+// Version du fichier : 1.2.0
+// Fonction du fichier : Declares the hand-drawn widget set: the Theme colours, the Widget record and the Form that owns one window.
+
 // in dark grey. One Form is the whole content of one window.
 #pragma once
 #include "grabber.h"

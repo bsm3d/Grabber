@@ -1,10 +1,10 @@
-﻿// Grabber: a small screen recorder for Windows.
-// Author: Benoit Saint-Moulin
-//
-// Command line (for tests, the program is a window otherwise):
-//   Grabber.exe --shot file.png                 draws the window into a PNG and quits
-//   Grabber.exe --rec-test outdir seconds x y w h [sound] [cam:NAME]
-//                                               records a zone for some seconds, then writes outdir\result.txt
+﻿// Grabber
+// © Benoit Saint-Moulin - 2026
+// Version du fichier : 1.2.0
+// Fonction du fichier : Entry point of Grabber: handles the command line test modes, otherwise starts the main window.
+
+// Command line, for tests (otherwise the program is a window):
+// Grabber.exe --shot file.png                 draws the window into a PNG and quits
 #include "grabber.h"
 #include "ui.h"
 
@@ -63,7 +63,6 @@ static int rec_test(const vector<wstring>& a) {
     write_text_file(out / L"result.txt", log);
     return ok ? 0 : 2;
 }
-
 
 // --apps-test outdir titleA titleB titleC : A and B are recorded, C is not; the front window goes A, C, B, A (2 s, 2 s, 2 s, 1 s), with the camera and an intro
 static int apps_test(const vector<wstring>& a) {

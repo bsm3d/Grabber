@@ -1,4 +1,8 @@
-// Grabber: entry points of the user interface.
+// Grabber
+// © Benoit Saint-Moulin - 2026
+// Version du fichier : 1.2.0
+// Fonction du fichier : Entry points of the user interface: the application folder, run_app and the picker test helper.
+
 #pragma once
 #include "grabber.h"
 

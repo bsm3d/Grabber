@@ -1,3 +1,8 @@
+# Grabber
+# © Benoit Saint-Moulin - 2026
+# Version du fichier : 1.2.0
+# Fonction du fichier : Draws the capture.ico icon, a red claw on a dark rounded square, with Pillow.
+
 """capture.ico: a dark rounded square with a red fairground claw (a grabber) hanging from its cable"""
 from PIL import Image, ImageDraw
 

@@ -1,3 +1,8 @@
+# Grabber
+# © Benoit Saint-Moulin - 2026
+# Version du fichier : 1.2.0
+# Fonction du fichier : Test helper that opens a frameless, always on top, coloured window for the capture tests.
+
 import sys
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtCore import Qt

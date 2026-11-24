@@ -1,3 +1,8 @@
+# Grabber
+# © Benoit Saint-Moulin - 2026
+# Version du fichier : 1.2.0
+# Fonction du fichier : Test helper that opens a titled, coloured window of a given size to serve as a recording target.
+
 import sys
 from PySide6.QtWidgets import QApplication, QWidget
 from PySide6.QtGui import QColor

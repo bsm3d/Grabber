@@ -1,4 +1,8 @@
-﻿// Grabber: the windows (the main window, the card editor, the About box, the zone picker, the click circles).
+﻿// Grabber
+// © Benoit Saint-Moulin - 2026
+// Version du fichier : 1.2.0
+// Fonction du fichier : Implementation of Grabber's windows: main window, card editor, about box, zone picker and click circles.
+
 #include "toolkit.h"
 #include "ui.h"
 
@@ -1688,7 +1692,6 @@ static bool register_windows(HINSTANCE inst) {
     pc.lpszClassName = PICKER_CLASS;
     return RegisterClassExW(&rc) && RegisterClassExW(&pc);
 }
-
 
 // tests: opens the zone picker, drags a rectangle with the real mouse (500,400 to 800,650) and writes what it answered
 int picker_test(const wstring& out_file) {

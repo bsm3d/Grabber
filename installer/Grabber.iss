@@ -1,4 +1,8 @@
-﻿; Installer of Grabber: packs dist\Grabber (the program, ffmpeg.exe, the licences). Built by build.ps1 -Package.
+﻿; Grabber
+; © Benoit Saint-Moulin - 2026
+; Version du fichier : 1.2.0
+; Fonction du fichier : Inno Setup script that packs the Grabber distribution folder into a per-user installer with version and icons.
+
 #ifndef AppVersion
   #define AppVersion "1.0.0"
 #endif

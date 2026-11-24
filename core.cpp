@@ -1,8 +1,9 @@
-﻿// Grabber, the engine: what can be captured (a zone, a screen, a window, several applications), the video (ffmpeg, gdigrab), the sound of the PC
-// (WASAPI loopback) and the final MP4 (H.264 + AAC).
-//
-// The video goes live to a temporary file, the sound is written to a WAV on the same clock; when the recording stops both are joined into one MP4,
-// then encoded a last time with the chosen compression (with an intro and an outro if asked) and the temporary files are deleted.
+﻿// Grabber
+// © Benoit Saint-Moulin - 2026
+// Version du fichier : 1.2.0
+// Fonction du fichier : Recording engine: captures a screen, zone, window or several applications with ffmpeg and WASAPI sound, then encodes the final MP4.
+
+// The video goes to a temporary file, the sound to a WAV on the same clock. On stop both are joined into one MP4, encoded once more, then the temporaries are deleted.
 // If the PC played nothing at all, the MP4 has no sound track.
 #include <initguid.h>
 

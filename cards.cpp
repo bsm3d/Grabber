@@ -1,4 +1,8 @@
-﻿// Grabber: the title cards of the intro and the outro (drawn with GDI+).
+﻿// Grabber
+// © Benoit Saint-Moulin - 2026
+// Version du fichier : 1.2.0
+// Fonction du fichier : Draws the title cards of the intro and outro of a recording with GDI+, including its startup and shutdown.
+
 #include "grabber.h"
 
 #include <objidl.h>

@@ -1,8 +1,11 @@
-﻿# Builds Grabber with MinGW-w64 (MSYS2 ucrt64), statically linked: no runtime to install next to it.
-#   powershell -File build.ps1            Grabber.exe, then dist\Grabber (the program, ffmpeg.exe, the licences)
-#   powershell -File build.ps1 -Package   the same, then the portable zip and the installer in D:\Documents\Coding\distributions\Grabber, or in $env:BSM_DISTRIBUTIONS\Grabber (Inno Setup 6)
-#   powershell -File build.ps1 -Syntax    only checks that the sources compile
+﻿# Grabber
+# © Benoit Saint-Moulin - 2026
+# Version du fichier : 1.2.0
+# Fonction du fichier : PowerShell build script that compiles Grabber with MinGW-w64 and packs the program, zip and installer, or only syntax-checks.
+
+# Builds Grabber with MinGW-w64 (MSYS2 ucrt64), statically linked: no runtime to install next to it.
 # ffmpeg.exe: see below (GRABBER_FFMPEG, C:\Tools\ffmpeg, the PATH). MinGW: C:\msys64\ucrt64\bin, or the folder named by GRABBER_MINGW.
+# powershell -File build.ps1            Grabber.exe, then dist\Grabber (the program, ffmpeg.exe, the licences)
 param([switch]$Syntax, [switch]$Package)
 $ErrorActionPreference = 'Stop'
 $here = Split-Path -Parent $MyInvocation.MyCommand.Path
