@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/robot.png" alt="The Grabber robot holding a camera" width="520"></p>
+<p align="center"><img src="docs/robot.png" alt="The Grabber robot holding a camera" width="100%"></p>
 
 <p align="center">Grabber is cool :)</p>
 
